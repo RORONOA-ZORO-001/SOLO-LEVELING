@@ -1,0 +1,335 @@
+100 days of code in python every day tasks
+#TASK-1:
+
+
+
+print("welcome to band name generator")
+a=input("what's the name of the city you grew up in?\n")
+b=input("What's your pet's name?\n")
+print("your band name could be "+a +" "+b)
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#TASK-2:
+
+
+print("welcome to the tip calculator!")
+a=float(input("what was the total bill? $"))
+b=float(input("how much tip would you like to give? 10, 12, or 15?"))
+c=float(input("how many people to split the bill?"))
+d=(a+((a*b)/100))/c
+print("each person should pay: $",round(d,2))
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#TASK-3:
+
+print(''' *******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/
+******************************************************************************* ''')
+print("Welcome to Treasure islan your mission is to find the treasure")
+a=input("you are at a  cross road.Where do you want to go ?\n type left or right").lower()
+if a=="right":
+    print("Game Over.")
+elif a=="left":
+    b=input("you've come to a lake . There is an island in the middle of the lake.\n type swim to swim across  or wait to wait for a boat").lower()
+    if b=="swim":
+        print("Game Over.")
+    elif b=="wait":
+        c=input("You arrived at the island unharmed. there is a house with 3 doors.\n One red,one Yellow and one blue.Which color do you choose? type red, yellow, blue").lower()
+        if c=="red":
+            print("Game Over.")
+        elif c=="blue":
+            print("Game Over.")
+        elif c=="yellow":
+            print("You Won!")
+        else:
+            print("type red,blue,yellow only! ")
+    else:
+        print("type swim or wait only!")
+else:
+    print("enter left or right only!")
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#TASK-4:
+
+
+import random
+rock ='''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___) 
+
+'''
+paper='''
+
+    _______
+---'    ____)____
+           ______)
+          _______)
+         _______)
+---.__________)
+
+'''
+
+scissors='''
+
+   _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+
+'''
+
+a=int(input("what do you choose ? Type 0 for Rock,1 for Paper or 2 for Scissors"))
+b=random.randint(0,2)
+if(a==0):
+    print(rock)
+elif(a==1):
+    print(paper)
+elif(a==2):
+    print(scissors)
+else:
+    print("choose between 0 ,1 or 2")
+if(b==0):
+    print(rock)
+elif(b==1):
+    print(paper)
+else:
+    print(scissors)
+if(a==b):
+    print("Tie")
+elif(a==0 and b==1):
+    print("you loose")
+elif(a==0 and b==2):
+    print("you won")
+elif(a==1 and b==0):
+    print("you won")
+elif(a==1 and b==2):
+    print("you loose")
+elif(a==2 and b==0):
+    print("you loose")
+elif(a==2 and b==1):
+    print("you won")
+else:
+    print("error occured")
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TASK-5:
+
+
+
+import random
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+
+print("Welcome to the PyPassword Generator!")
+nr_letters = int(input(f"How many letters would you like in your password?\n")) 
+nr_symbols = int(input(f"How many symbols would you like?\n"))
+nr_numbers = int(input(f"How many numbers would you like?\n"))
+a=[]
+for i in range(0,nr_letters):
+    a.append(random.choice(letters))
+for i in range(0,nr_symbols):
+    a.append(random.choice(symbols))
+for i in range(0,nr_numbers):
+    a.append(random.choice(numbers))
+random.shuffle(a)
+aizen=""
+for i in a:
+    aizen+=i
+print(f"your password can be: {aizen}")
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TASK-:7
+
+import random
+print("----------------------------------step-2-------------------------------------")
+hm=[
+'''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========''',
+'''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========''',
+'''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========''',
+'''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''',
+'''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========''',
+'''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========''',
+'''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+========='''
+]
+
+logo='''
+ _                                             
+| |                                            
+| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
+| '_ \ / _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
+| | | | (_| | | | | (_| | | | | | | (_| | | | |
+|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                    __/ |                      
+                   |___/  
+'''
+print(logo)
+a=["luffy","zoro","sanji","todo","laffy"]
+lives=6
+
+c=random.choice(a)
+
+var1=""
+for i in range(len(c)):
+    var1+='-'
+print(var1)
+
+
+game_over=False
+list1=[]
+while not game_over:
+    print(f"**************************************{lives}/6**************************************")
+    b=input("enter a value:").lower()
+    if b in list1:
+        print("you already guessed")
+    var2=""
+    for i in c:
+        if i==b:
+            var2+=i
+            list1.append(b)
+        elif i in list1:
+            var2+=i
+        else:
+            var2+='-'
+    print(var2)
+    if b not in c:
+        lives-=1
+        if lives==0:
+            game_over=True
+            print(f"**********************IT WAS {c}! YOU lOSE***********************************")
+    if "-" not in var2:
+        game_over=True
+        print("you won")
+    print(hm[lives])
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TASK-8:
+
+alpha=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+logo = """           
+ ,adPPYba, ,adPPYYba,  ,adPPYba, ,adPPYba, ,adPPYYba, 8b,dPPYba,  
+a8"     "" ""     `Y8 a8P_____88 I8[    "" ""     `Y8 88P'   "Y8  
+8b         ,adPPPPP88 8PP"""""""  `"Y8ba,  ,adPPPPP88 88          
+"8a,   ,aa 88,    ,88 "8b,   ,aa aa    ]8I 88,    ,88 88          
+ `"Ybbd8"' `"8bbdP"Y8  `"Ybbd8"' `"YbbdP"' `"8bbdP"Y8 88   
+            88             88                                 
+           ""             88                                 
+                          88                                 
+ ,adPPYba, 88 8b,dPPYba,  88,dPPYba,   ,adPPYba, 8b,dPPYba,  
+a8"     "" 88 88P'    "8a 88P'    "8a a8P_____88 88P'   "Y8  
+8b         88 88       d8 88       88 8PP""""""" 88          
+"8a,   ,aa 88 88b,   ,a8" 88       88 "8b,   ,aa 88          
+ `"Ybbd8"' 88 88`YbbdP"'  88       88  `"Ybbd8"' 88          
+              88                                             
+              88           
+"""
+print(logo)
+t=""
+while t!='.':
+    text=input("enter text:").lower()
+    shift=int(input("enter shift:"))
+    direction=input("type decode for decode, any thing for encode").lower()
+    def ceasar(text,shift,direction):
+        if direction=="decode":
+                b=""
+                for i in text:
+                    if i not in alpha:
+                        b+=i
+                    else:
+                        a=alpha.index(i)-shift
+                        a%=len(alpha)
+                        b+=alpha[a]
+                print(b)
+        else:
+                ctext=""
+                for i in text:
+                    if i not in alpha:
+                        ctext+=i
+                    else:
+                        a=alpha.index(i)+shift
+                        a=a%len(alpha)
+                        ctext+=alpha[a]
+                print(ctext)
+    ceasar(text,shift,direction)
+    t=input("enter . to stop ")
+print("----------------------------------------------------Program is exited---------------------------------------------------------")
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+TASK-9:
