@@ -333,3 +333,76 @@ print("----------------------------------------------------Program is exited----
 
 
 TASK-9:
+def highest_bid(dict):
+    high=0
+    n=""
+    for i in dict:
+        h=dict[i]
+        if high<h:
+            high=h
+            n=i
+    print(f"the winner is {n} with a bid of ${high}")
+
+
+logo=
+dict={}
+going='yes'
+while going!='no':
+    name=input("enter your name")
+    bid=int(input("enter your bid $"))
+    dict[name]=bid
+    going=input("are there any other bidders ? type 'yes' or 'no'").lower()
+    if going=='no':
+        highest_bid(dict)
+    if going=='yes':
+        print('\n'*100)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Task-10
+
+logo='''
+        |  _________________  |
+        | |                 | |
+        | |_________________| |
+        |  ___ ___ ___   ___  |
+        | | 7 | 8 | 9 | | + | |
+        | |___|___|___| |___| |
+        | | 4 | 5 | 6 | | - | |
+        | |___|___|___| |___| |
+        | | 1 | 2 | 3 | | x | |
+        | |___|___|___| |___| |
+        | | . | 0 | = | | / | |
+        | |___|___|___| |___| |
+        |_____________________|   '''
+print(logo)
+def add(n1,n2):
+    return n1 + n2
+def subtract(n1,n2):
+    return n1-n2
+def multiply(n1,n2):
+    return n1*n2
+def divide(n1,n2):
+    return n1/n2
+
+dicto={"+":add,"-":subtract,"*":multiply,"/":divide}
+def calculator():
+    should_accumulate=True
+    n1=float(input("what is the first number?:"))
+    while should_accumulate:
+        for i in dicto:
+            print(i)
+        operation_symbol=input("pick an operation:")
+        n2=float(input("what is next number?:"))
+        ans=dicto[operation_symbol](n1,n2)
+        print(f"{n1} {operation_symbol} {n2} ={ans}")
+        choice=input(f"Type y to continue with {ans} , or type 'n' to start new calculation")
+        if choice=="y":
+            n1=ans
+        elif choice=='n':
+            should_accumulate=False
+            print('\n'*20)
+            calculator()
+        else:
+            should_accumulate=False
+calculator()
